@@ -15,24 +15,24 @@ public class Room {
         this.isOccupied = isOccupied;
     }
 
-        public int getNumberOfBeds() {
-            return numberOfBeds;
-        }
+    public int getNumberOfBeds() {
+        return numberOfBeds;
+    }
 
-        public double getPrice() {
-            return price;
-        }
+    public double getPrice() {
+        return price;
+    }
 
-        public boolean isDirty() {
-            return isDirty;
-        }
+    public boolean isDirty() {
+        return isDirty;
+    }
 
-        public boolean isOccupied() {
-            return isOccupied;
-        }
+    public boolean isOccupied() {
+        return isOccupied;
+    }
 
     public boolean isAvailable() {
-        if(!this.isOccupied() && !this.isDirty()){
+        if (!this.isOccupied() && !this.isDirty()) {
             return true;
         }
         return false;
@@ -42,21 +42,20 @@ public class Room {
         this.isOccupied = true;
         this.isDirty = true;
         System.out.println("This room is checked in.");
-        }
+    }
 
-        public void cleanRoom() {
+    public void cleanRoom() {
         this.isDirty = false;
         System.out.println("This room is being cleaned.");
-        }
+    }
 
-        public void checkOut() {
+    public void checkOut() {
         this.isOccupied = false;
-            System.out.println("The guest has checked out.");
-
+        this.cleanRoom();
+        System.out.println("The guest has checked out.");
 
 
     }
-
 
 
 }
