@@ -45,10 +45,24 @@ public class Main {
         System.out.println("Available: " + room4.isAvailable());
         System.out.println();
 
+        //Method to call employee out
         Employee employee1 = new Employee(4120, "Adrian", "Front desk", 18.00, 40);
 
         System.out.println("Employee 1");
-        System.out.println("Employee ID: " + employee1.employeeId());
+        System.out.println("Employee ID: " + employee1.getEmployeeId());
+        System.out.println("Employee Name: " + employee1.getName());
+        System.out.println("Employee Department: " + employee1.getDepartment());
+        System.out.println("Employee Pay rate: $" + employee1.getPayRate());
+        System.out.println("Employee Hours worked: " + employee1.getHoursWorked());
+        System.out.println("Employee total pay: $" + employee1.getTotalPay());
+
+        //Next shift is an 8 hour shift from 9am - 5pm.
+        employee1.punchIn(9);
+        employee1.punchOut(17);
+
+        //This is the new hours and pay added for the week WITH the new shift added on.
+        System.out.println("Hours worked after shift: " + employee1.getHoursWorked());
+        System.out.println("Total pay now: $" + employee1.getTotalPay());
 
 
 

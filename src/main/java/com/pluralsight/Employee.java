@@ -19,6 +19,37 @@ public class Employee {
         this.hoursWorked = hoursWorked;
     }
 
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public int getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public int getPunchIn() {
+        return punchIn;
+    }
+
+    public int getPunchOut() {
+        return punchOut;
+    }
+
+    public double getPayRate() {
+        return payRate;
+
+
+
+    }
+
     public double getTotalPay(){
         double regularPay = this.payRate * getRegularHours();
         double overTimePay = this.payRate * this.getOvertimeHours() * 1.5;
