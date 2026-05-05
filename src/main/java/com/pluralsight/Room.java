@@ -38,6 +38,25 @@ public class Room {
         return false;
     }
 
+    public void checkIn() {
+        this.isOccupied = true;
+        this.isDirty = true;
+        System.out.println("This room is checked in.");
+        }
+
+        public void cleanRoom() {
+        this.isDirty = false;
+        System.out.println("This room is being cleaned.");
+        }
+
+        public void checkOut() {
+        this.isOccupied = false;
+            System.out.println("The guest has checked out.");
+
+
+
+    }
+
 
 
 }
