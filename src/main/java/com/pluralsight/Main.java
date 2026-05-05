@@ -12,6 +12,7 @@ public class Main {
 
         Room room4 = new Room(1, 99.99, true, true);
 
+
         System.out.println("Room 1");
         System.out.println("Beds: " + room1.getNumberOfBeds());
         System.out.println("Price: $" + room1.getPrice());
@@ -43,6 +44,11 @@ public class Main {
         System.out.println("Dirty: " + room4.isDirty());
         System.out.println("Available: " + room4.isAvailable());
         System.out.println();
+
+        Employee employee1 = new Employee(4120, "Adrian", "Front desk", 18.00, 40);
+
+        System.out.println("Employee 1");
+        System.out.println("Employee ID: " + employee1.employeeId());
 
 
 

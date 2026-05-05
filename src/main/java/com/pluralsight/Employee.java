@@ -7,6 +7,9 @@ public class Employee {
     private String department;
     private double payRate;
     private int hoursWorked;
+    private int punchIn;
+    private int punchOut;
+
 
     public Employee(int employeeId, String name, String department, double payRate, int hoursWorked) {
         this.employeeId = employeeId;
@@ -35,6 +38,14 @@ public class Employee {
             return this.hoursWorked - 40;
         }
         return 0;
+    }
+
+    public void punchIn(int time) {
+        this.punchIn = time;
+    }
+
+    public void punchOut(int time) {
+        this.hoursWorked = this.hoursWorked + time - this.punchIn;
     }
 
 }
