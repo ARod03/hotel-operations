@@ -24,28 +24,25 @@ public class Hotel {
 
     public boolean bookRoom(int numberOfRooms, boolean isSuite) {
         if (isSuite) {
-            if (bookedSuites + numberOfRooms <= numberOfSuites) {
-                bookedSuites += numberOfRooms;
+            if (this.bookedSuites + numberOfRooms <= this.numberOfSuites) {
+                this.bookedSuites += numberOfRooms;
                 return true;
-            } else {
-                return false;
             }
         } else {
-            if (bookedRooms + numberOfRooms <= numberOfRooms) {
-                bookedRooms += numberOfRooms;
+            if (this.bookedRooms + numberOfRooms <= numberOfRooms) {
+                this.bookedRooms += numberOfRooms;
                 return true;
-            } else {
-                return false;
             }
         }
+        return false;
     }
 
     public int getAvailableRooms() {
-        return this.numberOfRooms - bookedRooms;
+        return this.numberOfRooms - this.bookedRooms;
 
     }
     public int getAvailableSuites() {
-        return this.numberOfSuites - bookedSuites;
+        return this.numberOfSuites - this.bookedSuites;
 
     }
 
