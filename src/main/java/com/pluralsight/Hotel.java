@@ -41,10 +41,12 @@ public class Hotel {
     }
 
     public int getAvailableRooms() {
+        return this.numberOfRooms - bookedRooms;
 
     }
-    public int getNumberOfNights() {
+    public int getAvailableSuites() {
         return this.numberOfSuites - bookedSuites;
+
     }
 
 }
