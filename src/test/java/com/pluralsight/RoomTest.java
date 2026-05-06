@@ -45,7 +45,7 @@ class RoomTest {
     @Test
     public void checkOut_should_not_be_occupied() {
         // arrange
-        Room testingRoom2 = new Room(1, 89.99, true, false);
+        Room testingRoom2 = new Room(1, 89.99, true, true);
 
         //act
         testingRoom2.checkOut();
